@@ -1,12 +1,87 @@
----
-layout: main
-title: Select2 3.2
-group: navigation
-version: 3.2
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Select2 3.2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Select2 JQuery Plugin">
+    <meta name="author" content="Igor Vaynberg">
 
-<link href="select2-3.2/select2.css" rel="stylesheet"/>
-<script src="select2-3.2/select2.js"></script>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link href="bootstrap/css/google-bootstrap.css" rel="stylesheet"/>
+    <link href="prettify/prettify.css" rel="stylesheet"/>
+      <style type="text/css">
+        .zebra { background-color: #efefef; }
+
+        img.flag { height: 10px; width: 15px; padding-right: 10px; }
+
+        .movie-result td {vertical-align: top }
+        .movie-image { width: 60px; }
+        .movie-image img { height: 80px; width: 60px;  }
+        .movie-info { padding-left: 10px; vertical-align: top; }
+        .movie-title { font-size: 1.2em; padding-bottom: 15px; }
+        .movie-synopsis { font-size: .8em; color: #888; }
+        .select2-highlighted .movie-synopsis { font-size: .8em; color: #eee; }
+        .bigdrop.select2-container .select2-results {max-height: 300px;}
+        .bigdrop .select2-results {max-height: 300px;}
+      </style>
+
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shim.js"></script>
+    <![endif]-->
+
+      <script src="js/json2.js"></script>
+      <script src="js/jquery-1.7.1.min.js"></script>
+      <script src="js/jquery-ui-1.8.20.custom.min.js"></script> <!-- for sortable example -->
+      <script src="js/jquery.mousewheel.js"></script>
+      <script src="prettify/prettify.min.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+
+      <script>
+          $(document).ready(function() {
+
+              function setupExampleCode(id) {
+                  var s = $("#script_"+id).html();
+                  s = s.replace(/</g, "&lt;");
+                  s = s.substr(s.indexOf("\n") + 1);
+                  s = s.substr(s.indexOf("\n") + 1);
+                  s = s.substr(0, s.lastIndexOf("\n"));
+                  s = s.substr(0, s.lastIndexOf("\n"));
+                  $("#code_"+id).html(s);
+              }
+
+              var i, e;
+              for (i = 2; ; i++) {
+                  e = $("#script_e" + i);
+                  if (e.length == 0) break;
+                  setupExampleCode("e" + i);
+              }
+
+              prettyPrint();
+          });
+      </script>
+
+  </head>
+
+  <body>
+
+  <a href="https://github.com/ivaynberg/select2"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2000" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+    <div class="container">
+
+      <div class="hero-unit" style="margin-top: 40px;">
+        <h1>Google Select2</h1>
+        <p>Google Select2 is a Google-themed fork of ivaynberg's excellent <a href="https://github.com/ivaynberg/select2">Select2</a> library.
+            It is intended to be a natural fit with <a href="http://todc.github.com/css3-google-buttons">Google Bootstrap</a>.
+            <p>
+                <a class="btn btn-primary btn-large" href="https://github.com/todc/google-select2">Learn more on GitHub &raquo;</a>
+                <a class="btn btn-success btn-large" href="https://github.com/todc/google-select2/tags">Download &raquo;</a>
+            </p>
+      </div>
+
+      <link href="select2-3.2/select2.css" rel="stylesheet"/>
+      <script src="select2-3.2/select2.js"></script>
 
 <script id="script_e1">
 
@@ -177,7 +252,7 @@ version: 3.2
 <header class="jumbotron subhead">
     <div class="subnav">
         <ul class="nav nav-pills">
-            <li><a href="#changelog">Changelog</a></li>
+            <!--<li><a href="#changelog">Changelog</a></li>-->
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Examples <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -205,7 +280,7 @@ version: 3.2
     </div>
 </header>
 
-
+<!--
 <section id="changelog">
     <h2>Changelog</h2>
     <div class="row"><div class="span12">
@@ -213,7 +288,7 @@ version: 3.2
             <li>Loading...</li>
             <script>
                 $(function() {
-                    var url="https://api.github.com/repos/ivaynberg/select2/issues?state=closed&milestone=6";
+                    var url="https://api.github.com/repos/todc/google-select2/issues?state=closed&milestone=6";
                     $.ajax({
                         url: url,
                         dataType: "jsonp"
@@ -236,6 +311,7 @@ version: 3.2
         </ul>
     </div></div>
 </section>
+-->
 
 <section>
     <h2>Browser Compatibility</h2>
@@ -1424,3 +1500,31 @@ Example: <pre class="prettyprint">alert("Selected value is: "+$("#e8").select2("
     });
 </script>
 -->
+
+
+
+      <section id="about">
+          <div class="row">
+               <div class="span12"><h2>About</h2></div>
+          </div>
+          <div class="row">
+              <div class="span12">
+
+                  <ul>
+                     <li><a href="https://github.com/ivaynberg/select2">Project Site</a></li>
+                     <li><a href="https://github.com/ivaynberg/select2/issues">Bug Tracker</a></li>
+                     <li><a href="https://github.com/ivaynberg/select2/wiki">Wiki containing example integrations and usages such as Knockout.js, Socket.io, and PHP</a></li>
+                     <li><a href="https://groups.google.com/d/forum/select2">Mailing List</a></li>
+                  </ul>
+              </div>
+          </div>
+
+      </section>
+       <hr/>
+        <footer>
+        <p>Select2 is licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software Foundation License Version 2.0</a>. Coded by Igor Vaynberg.</p>
+      </footer>
+
+    </div> <!-- /container -->
+  </body>
+</html>
