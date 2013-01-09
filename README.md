@@ -1,7 +1,7 @@
 Google Select2
 =================
 
-Google Select2 is a Google-themed fork of ivaynberg's excellent [Select2](http://ivaynberg.github.com/select2/) library. It is intended to be a natural fit with [Google Bootstrap](http://todc.github.com/css3-google-buttons/).
+Google Select2 is a Google-themed fork of ivaynberg's excellent [Select2](http://ivaynberg.github.com/select2/) library. It is intended to be used with [Google Bootstrap](http://todc.github.com/css3-google-buttons/).
 
 To get started -- checkout http://todc.github.com/google-select2!
 
