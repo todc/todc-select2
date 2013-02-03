@@ -1,9 +1,9 @@
-Google Select2
+todc-select2
 =================
 
-Google Select2 is a Google-themed fork of ivaynberg's excellent [Select2](http://ivaynberg.github.com/select2/) library. It is intended to be used with [Google Bootstrap](http://todc.github.com/css3-google-buttons/).
+todc-select2 is a Google-themed fork of ivaynberg's excellent [Select2](http://ivaynberg.github.com/select2/) library. It is intended to be used with [TODC Bootstrap](http://todc.github.com/css3-google-buttons/), a Google-styled theme for Twitter Bootstrap.
 
-To get started -- checkout http://todc.github.com/google-select2!
+To get started -- checkout http://todc.github.com/todc-select2!
 
 Browser Compatibility
 --------------------
@@ -16,11 +16,11 @@ Browser Compatibility
 Integrations
 ------------
 
-* [Google Bootstrap](https://github.com/todc/google-select2)
+* [TODC Bootstrap](https://github.com/todc/todc-select2)
 
 Bug tracker
 -----------
 
 Have a bug? Please create an issue here on GitHub!
 
-https://github.com/todc/google-select2/issues
+https://github.com/todc/todc-select2/issues
