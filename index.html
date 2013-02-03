@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Google Select2</title>
+    <title>todc-select2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Select2 JQuery Plugin">
     <meta name="author" content="Igor Vaynberg">
 
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
-    <link href="bootstrap/css/google-bootstrap.css" rel="stylesheet"/>
+    <link href="bootstrap/css/todc-bootstrap.css" rel="stylesheet"/>
     <link href="prettify/prettify.css" rel="stylesheet"/>
       <style type="text/css">
         .zebra { background-color: #efefef; }
@@ -71,12 +71,12 @@
     <div class="container">
 
       <div class="hero-unit" style="margin-top: 40px;">
-        <h1>Google Select2</h1>
-        <p>Google Select2 is a Google-themed fork of ivaynberg's excellent <a href="https://github.com/ivaynberg/select2">Select2</a> library.
-            It is intended to be a natural fit with <a href="http://todc.github.com/css3-google-buttons">Google Bootstrap</a>.
+        <h1>todc-select2</h1>
+        <p>todc-select2 is a Google-themed fork of ivaynberg's excellent <a href="https://github.com/ivaynberg/select2">Select2</a> library.
+            It is intended to be a natural fit with <a href="http://todc.github.com/todc-bootstrap">TODC Bootstrap</a>.
             <p>
-                <a class="btn btn-primary btn-large" href="https://github.com/todc/google-select2">Learn more on GitHub &raquo;</a>
-                <a class="btn btn-success btn-large" href="https://github.com/todc/google-select2/tags">Download &raquo;</a>
+                <a class="btn btn-primary btn-large" href="https://github.com/todc/todc-select2">Learn more on GitHub &raquo;</a>
+                <a class="btn btn-success btn-large" href="https://github.com/todc/todc-select2/tags">Download &raquo;</a>
             </p>
       </div>
 
@@ -279,39 +279,6 @@
         </ul>
     </div>
 </header>
-
-<!--
-<section id="changelog">
-    <h2>Changelog</h2>
-    <div class="row"><div class="span12">
-        <ul>
-            <li>Loading...</li>
-            <script>
-                $(function() {
-                    var url="https://api.github.com/repos/todc/google-select2/issues?state=closed&milestone=6";
-                    $.ajax({
-                        url: url,
-                        dataType: "jsonp"
-                    }).done(function(issues) {
-                                var list=$("#changelog ul");
-                                var template="<li><a href='$url'><span>#$num</span> </a>$title</li>";
-                                list.empty();
-                                $.each(issues.data, function() {
-                                    var markup=template
-                                            .replace(/\$url/g, this.html_url)
-                                            .replace(/\$num/g, this.number)
-                                            .replace(/\$title/g, this.title)
-                                    list.append(markup);
-                                });
-                            }).fail(function() {
-                                $("#changelog ul").empty().append("<li class='alert alert-error'>Error retrieving changelog</li>");
-                            });
-                });
-            </script>
-        </ul>
-    </div></div>
-</section>
--->
 
 <section>
     <h2>Browser Compatibility</h2>
