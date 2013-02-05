@@ -115,15 +115,19 @@ Version: 3.2 Timestamp: Mon Sep 10 10:38:04 PDT 2012
   top: 8px;
   width: 12px;
   height: 12px;
-  font-size: 1px;
-  background: url('select2.png') right top no-repeat;
+  
+	font-size: 17px;
+  line-height: 16px;
+  color: #595959;
+  font-weight: 700;
+  
   cursor: pointer;
   text-decoration: none;
   border:0;
   outline: 0;
 }
 .select2-container .select2-choice abbr:hover {
-  background-position: right -11px;
+  color: #222;
   cursor: pointer;
 }
 
@@ -471,10 +475,16 @@ disabled look for already selected choices in the results dropdown
   top: 4px;
   width: 12px;
   height: 13px;
-  font-size: 1px;
-  background: url('select2.png') right top no-repeat;
-  background-position: right -11px;
+  font-size: 17px;
+  line-height: 16px;
+  color: #444;
+  font-weight: 700;
   outline: none;
+}
+.select2-search-choice-close:hover {
+	text-decoration: none;
+	color: #222;
+	cursor: pointer;
 }
 
 /* disabled styles */
@@ -562,7 +572,7 @@ disabled look for already selected choices in the results dropdown
 /* Retina-ize icons */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
-	.select2-search input, .select2-search-choice-close, .select2-container .select2-choice abbr, .select2-container .select2-choice div b {
+	.select2-search input, .select2-container .select2-choice div b {
 		background-image: url(select2x2.png) !important;
 		background-repeat: no-repeat !important;
 		background-size: 60px 40px !important;

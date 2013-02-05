@@ -1378,7 +1378,7 @@
                 "class": "select2-container"
             }).html([
                 "    <a href='#' onclick='return false;' class='select2-choice'>",
-                "   <span></span><abbr class='select2-search-choice-close' style='display:none;'></abbr>",
+                "   <span></span><abbr class='select2-search-choice-close' style='display:none;'>×</abbr>",
                 "   <div><b></b></div>" ,
                 "</a>",
                 "    <div class='select2-drop select2-offscreen'>" ,
@@ -2070,7 +2070,7 @@
             var choice=$(
                     "<li class='select2-search-choice'>" +
                     "    <div></div>" +
-                    "    <a href='#' onclick='return false;' class='select2-search-choice-close' tabindex='-1'></a>" +
+                    "    <a href='#' onclick='return false;' class='select2-search-choice-close' tabindex='-1'>×</a>" +
                     "</li>"),
                 id = this.id(data),
                 val = this.getVal(),
