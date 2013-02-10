@@ -131,6 +131,14 @@ Version: 3.2 Timestamp: Mon Sep 10 10:38:04 PDT 2012
   cursor: pointer;
 }
 
+.select2-drop-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9998;
+    opacity: 0;
+}
+
 .select2-drop {
     background: #fff;
     color: #000;

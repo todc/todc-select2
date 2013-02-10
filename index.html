@@ -32,7 +32,7 @@
     <![endif]-->
 
       <script src="js/json2.js"></script>
-      <script src="js/jquery-1.7.1.min.js"></script>
+      <script src="js/jquery-1.9.1.min.js"></script>
       <script src="js/jquery-ui-1.8.20.custom.min.js"></script> <!-- for sortable example -->
       <script src="js/jquery.mousewheel.js"></script>
       <script src="prettify/prettify.min.js"></script>
@@ -112,7 +112,8 @@
         }
         $("#e4").select2({
             formatResult: format,
-            formatSelection: format
+            formatSelection: format,
+            escapeMarkup: function(markup) { return markup; }
         });
     });
 </script>
