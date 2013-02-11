@@ -806,7 +806,7 @@ the specific language governing permissions and limitations under the Apache Lic
                         var group;
                         if (element.is("option")) {
                             if (query.matcher(term, element.text(), element)) {
-                                collection.push({id:element.attr("value"), text:element.text(), element: element.get(), css: element.attr("class"), disabled: equal(element.attr("disabled"), "disabled") });
+                                collection.push({id:element.attr("value") || element.text(), text:element.text(), element: element.get(), css: element.attr("class"), disabled: equal(element.attr("disabled"), "disabled") });
                             }
                         } else if (element.is("optgroup")) {
                             group={text:element.attr("label"), children:[], element: element.get(), css: element.attr("class")};
@@ -1777,7 +1777,7 @@ the specific language governing permissions and limitations under the Apache Lic
                     var selected = element.find(":selected");
                     // a single select box always has a value, no need to null check 'selected'
                     if ($.isFunction(callback))
-                        callback({id: selected.attr("value"), text: selected.text(), element:selected});
+                        callback({id: selected.attr("value") || selected.text(), text: selected.text(), element:selected});
                 };
             } else if ("data" in opts) {
                 // install default initSelection when applied to hidden input and data is local
@@ -1899,7 +1899,7 @@ the specific language governing permissions and limitations under the Apache Lic
                 this.select
                     .val(val)
                     .find(":selected").each2(function (i, elm) {
-                        data = {id: elm.attr("value"), text: elm.text()};
+                        data = {id: elm.attr("value") || elm.text(), text: elm.text()};
                         return false;
                     });
                 this.updateSelection(data);
@@ -1989,7 +1989,7 @@ the specific language governing permissions and limitations under the Apache Lic
                     var data = [];
 
                     element.find(":selected").each2(function (i, elm) {
-                        data.push({id: elm.attr("value"), text: elm.text(), element: elm[0]});
+                        data.push({id: elm.attr("value") || elm.text(), text: elm.text(), element: elm[0]});
                     });
                     callback(data);
                 };
