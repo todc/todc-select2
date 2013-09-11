@@ -8,6 +8,15 @@ Version: 3.2 Timestamp: Mon Sep 10 10:38:04 PDT 2012
     zoom: 1;
     *display: inline;
     vertical-align: top;
+	padding: 0;
+	border: 0;
+}
+/* To override styles found in Bootstrap3 */
+.select2-container:hover {
+	border: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 
 .select2-container,
@@ -60,6 +69,11 @@ Version: 3.2 Timestamp: Mon Sep 10 10:38:04 PDT 2012
 		-webkit-box-shadow: none;
 		-moz-box-shadow: none;
 		box-shadow: none;
+		-moz-box-sizing: content-box;    /* firefox */
+	    -ms-box-sizing: content-box;     /* ie */
+	    -webkit-box-sizing: content-box; /* webkit */
+	    -khtml-box-sizing: content-box;  /* konqueror */
+	    box-sizing: content-box;         /* css3 */
 }
 .select2-container .select2-choice:hover {
 		color: #333;
