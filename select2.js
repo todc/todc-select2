@@ -1789,7 +1789,16 @@ the specific language governing permissions and limitations under the Apache Lic
                             return equal(id, opts.id(el));
                         },
                         callback: !$.isFunction(callback) ? $.noop : function(filtered) {
-                            callback(filtered.results.length ? filtered.results[0] : null);
+			    if (filtered.results.length){
+                                var r1 = filtered.results[0];
+				//If we have two-level menu, and the top level can not be selected(no id), 
+				//we should return the children node to selected when only one child existed
+                                if (!r1.id && r1.children && r1.children.length === 1){
+                                    callback(r1.children[0]);
+                                }else{
+                                    callback(r1);
+                                }
+                            }
                         }
                     });
                 };
