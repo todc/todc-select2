@@ -10,6 +10,8 @@ Version: 3.2 Timestamp: Mon Sep 10 10:38:04 PDT 2012
     vertical-align: top;
 	padding: 0;
 	border: 0;
+    /* force width to 100% */
+    width:100%\9;
 }
 /* To override styles found in Bootstrap3 */
 .select2-container:hover {
@@ -366,6 +368,10 @@ disabled look for already selected choices in the results dropdown
 }
 */
 .select2-results .select2-disabled {
+    display: none;
+}
+/* Hide selected items */ 
+.select2-results .select2-selected {
     display: none;
 }
 
